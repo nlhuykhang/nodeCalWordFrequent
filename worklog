@@ -1,0 +1,19 @@
+22/4
+	count: done
+	to telex style: done
+	next: 
+			
+			+case-insensitive		--> use regex? why and how?
+
+				why: cause can not use split method normally, and it is so stupid :v
+				how: internet?
+
+			+number to word
+			+to Hoang's format
+
+23/4
+	case-insensitive: done by using toLowerCase
+	number to word: done, be surprised with number quantity
+	Hoang's format: done
+
+	next: crawl more	
