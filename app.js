@@ -218,18 +218,20 @@ fs.readFile('origin', 'utf8', function(err, data) {
 
 
     // tạo dữ liệu kết quả
-    strArr += '{';
-    for (var i = 0, n = arrValue.length; i < n; i++) {
-        var temp = '"' + arrName[i] + '":' + arrValue[i] + ',';
-        strArr += temp;
-    }
-    strArr += '}';
+    // strArr += '{';
+    // for (var i = 0, n = arrValue.length; i < n; i++) {
+    //     var temp = '"' + arrName[i] + '":' + arrValue[i] + ',';
+    //     strArr += temp;
+    // }
+    // strArr += '}';
 
 
     //hoang's format
-    // for (var i = 0, n = arrValue.length; i < n; i++) {
-    //     strArr += arrName[i] + '\n';
-    // }
+    strArr += '[';
+    for (var i = arrValue.length - 1; i >= 0; i--) {
+        strArr += '"' + arrName[i] + '",\n';
+    }
+    strArr += ']';
 
     //xuất ra file
     fs.writeFile('result', strArr);
